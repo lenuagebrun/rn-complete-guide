@@ -8,24 +8,24 @@ const GoalInput = props => {
     setEnteredGoal(enteredText);
   };
 
-  return(
-    <View style={styles.style2}>
-    <TextInput
-      placeholder="Course Goal"
-      style={styles.textInput}
-      onChangeText={goalInputHandler}
-      value={enteredGoal}
-    />
-    <Button title="ADD" onPress={props.onAddGoal.bind(this, enteredGoal)} />
-  </View>
+  return (
+      <View style={styles.style2}>
+        <TextInput
+          placeholder="Course Goal"
+          style={styles.textInput}
+          onChangeText={goalInputHandler}
+          value={enteredGoal}
+        />
+        <Button title="ADD" onPress={props.onAddGoal.bind(this, enteredGoal)} />
+      </View>
   )
 }
 
 const styles = StyleSheet.create({
   style2: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'stretch'
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   textInput: {
     width: '80%',
